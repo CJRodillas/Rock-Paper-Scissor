@@ -1,11 +1,13 @@
 console.log("Hello World");
 
+let computerSelection;
+
 function computerPlay() {
        let arr = ["Rock", "Paper", "Scissors"];
 
-       let result = arr[Math.floor(Math.random() * arr.length)];
+       computerSelection = arr[Math.floor(Math.random() * arr.length)];
 
-       console.log(result);
+       console.log(computerSelection);
 };
 
 computerPlay();
