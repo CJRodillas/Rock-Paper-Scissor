@@ -34,5 +34,13 @@ function playRound(computerSelection, playerSelection) {
        }
 };
 
-playRound(computerSelection, playerSelection);
+function game() {
+       playRound(computerSelection, playerSelection);
+
+       for (let i = 0; i < 5; i++) {
+  
+       }
+}
+
+
 
