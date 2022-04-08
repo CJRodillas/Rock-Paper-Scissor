@@ -1,8 +1,3 @@
-
-let computerSelection = computerPlay();
-let user = prompt("Please choose between Rock, Paper, Scissors: ");
-let playerSelection = user.toLowerCase();
-
 function computerPlay() {
        let arr = ["Paper", "Rock", "Scissors"];
 
@@ -15,32 +10,46 @@ function playRound(computerSelection, playerSelection) {
        
        if (computerSelection == "paper" &&  playerSelection == "rock") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+              computerScore++;
        } else if (computerSelection == "paper" &&  playerSelection == "scissors") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+              userScore++;
        } else if (computerSelection == "paper" &&  playerSelection == "Paper") {
               console.log(`Draw! you both play ${computerSelection}`);
        }  else if (computerSelection == "rock" &&  playerSelection == "scissors") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+              computerScore++;
        } else if (computerSelection == "rock" &&  playerSelection == "paper") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+              userScore++;
        } else if (computerSelection == "rock" &&  playerSelection == "rock") {
               console.log(`Draw! you both play ${computerSelection}`);
        } else if (computerSelection == "scissors" &&  playerSelection == "paper") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+              computerScore++;
        } else if (computerSelection == "scissors" &&  playerSelection == "rock") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+              userScore++;
        } else if (computerSelection == "scissors" &&  playerSelection == "scissors") {
               console.log(`Draw! you both play ${computerSelection}`);
        }
 };
 
 function game() {
-       playRound(computerSelection, playerSelection);
 
        for (let i = 0; i < 5; i++) {
-  
-       }
+              let computerSelection = computerPlay();
+              let user = prompt("Please choose between Rock, Paper, Scissors: ");
+              let playerSelection = user.toLowerCase();
+              let userScore = parseInt(0);
+              let computerScore = parseInt(0);
+       
+
+              playRound(computerSelection, playerSelection);
+              console.log(computerScore);
+              console.log(userScore);
+       };
 }
 
-
+game();
 
