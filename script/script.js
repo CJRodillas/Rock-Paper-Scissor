@@ -1,34 +1,35 @@
 
 let computerSelection = computerPlay();
-let playerSelection = prompt("Please choose between Rock, Paper, Scissors: ");;
+let user = prompt("Please choose between Rock, Paper, Scissors: ");
+let playerSelection = user.toLowerCase();
 
 function computerPlay() {
        let arr = ["Paper", "Rock", "Scissors"];
 
        arr = arr[Math.floor(Math.random() * arr.length)];
 
-       return arr;
+       return arr.toLowerCase();
 };
 
 function playRound(computerSelection, playerSelection) {
        
-       if (computerSelection == "Paper" &&  playerSelection == "Rock") {
+       if (computerSelection == "paper" &&  playerSelection == "rock") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-       } else if (computerSelection == "Paper" &&  playerSelection == "Scissors") {
+       } else if (computerSelection == "paper" &&  playerSelection == "scissors") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-       } else if (computerSelection == "Paper" &&  playerSelection == "Paper") {
+       } else if (computerSelection == "paper" &&  playerSelection == "Paper") {
               console.log(`Draw! you both play ${computerSelection}`);
-       }  else if (computerSelection == "Rock" &&  playerSelection == "Scissors") {
+       }  else if (computerSelection == "rock" &&  playerSelection == "scissors") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-       } else if (computerSelection == "Rock" &&  playerSelection == "Paper") {
+       } else if (computerSelection == "rock" &&  playerSelection == "paper") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-       } else if (computerSelection == "Rock" &&  playerSelection == "Rock") {
+       } else if (computerSelection == "rock" &&  playerSelection == "rock") {
               console.log(`Draw! you both play ${computerSelection}`);
-       } else if (computerSelection == "Scissors" &&  playerSelection == "Paper") {
+       } else if (computerSelection == "scissors" &&  playerSelection == "paper") {
               console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-       } else if (computerSelection == "Scissors" &&  playerSelection == "Rock") {
+       } else if (computerSelection == "scissors" &&  playerSelection == "rock") {
               console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-       } else if (computerSelection == "Scissors" &&  playerSelection == "Scissors") {
+       } else if (computerSelection == "scissors" &&  playerSelection == "scissors") {
               console.log(`Draw! you both play ${computerSelection}`);
        }
 };
